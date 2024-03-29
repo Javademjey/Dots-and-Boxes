@@ -1,2 +1,3 @@
 # Dots-and-Boxes
-This is a dot and box game.
+This is a Dot and Box game.
+Game description: 
