@@ -1,7 +1,7 @@
 # Dots-and-Boxes
 This is a Dot and Box game.
 
-*Game description: 
+##Game description: 
 The goal in this game is to occupy a square, and this happens if four lines are placed in a square, and someone gets the points of the square that has inserted the last line.
 The dot and box game is a two-player game. I designed the game so that your opponent is the system.
 When you start the game, the first move is yours, then the game screen is shown, and when you pass the game screen, your opponent's system move is shown.
