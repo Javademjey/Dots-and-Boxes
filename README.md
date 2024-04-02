@@ -26,11 +26,16 @@ Linked list to navigate between nodes and tree to predict next states.
 My node class is box, which has the properties of nodes, but due to a bug encountered by the program, I had to create another node class called TempBox.
 #### In the box class:
 Index: box/square number (each node has a specific number)
+
 Number: line number (top=1, right=2, bottom=3, left=4)
+
 Next: The next node
+
 prev: previous node
+
 Scoring: Each node is given a unique score based on the number of four lines inserted (25 points per line).
 If any line is inserted, the position of that line changes from False to True.
+
 list_of_branches: Before the system moves, it creates a tree and continues it to several levels and chooses the best mode.
 The root of the tree is a node (square) that is evaluated and selected
 from among the existing nodes. Each node contains a list of all the nodes of the next level. In the next level,
