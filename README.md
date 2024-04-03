@@ -24,7 +24,7 @@ Your opponent in this game is the system and I programmed it to predict the next
 I used tree structure and linked list to write this program.
 Linked list to navigate between nodes and tree to predict next states.
 My node class is box, which has the properties of nodes, but due to a bug encountered by the program, I had to create another node class called TempBox.
-#### In the box class:
+#### Box class:
 Index: box/square number (each node has a specific number)
 
 Number: line number (top=1, right=2, bottom=3, left=4)
@@ -42,6 +42,25 @@ from among the existing nodes. Each node contains a list of all the nodes of the
 a node is again evaluated and selected among the nodes, and inside the selected 
 node there is a list of nodes of the next level, and if needed, we go to the next level and this process continues.
 The name of this list is list_of_branches.
+#### BigSquare class:
+CoordinateConfiguration: Configuration of coordinates: In this function, we calculate the coordinates of both points of a line
+from the four lines forming a square and append each one to own list. For example, the line in the top position is append to the __Lines_in_location_up list.
+
+InsertMovesInBord: It points to a line entered by the user or the system and refers to another function.
+
+CountingPoints: If the user or the system gets a square score, this function records that score.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
