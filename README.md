@@ -50,10 +50,23 @@ from the four lines forming a square and append each one to own list. For exampl
 
 **CountingPoints:** If the user or the system gets a square score, this function records that score.
 
+**ApplyingChangesFromBoxToTempBox:** This function copies the changes applied on the Box nodes to the TempBox nodes.
 
+**IsEnd:** This function checks after each movement (user or system) if there is an empty line? If not, it will announce the end of the game.
 
+#### Square class:
 
+**__InsertForYourself , __InsertForNeighbor:** I didn't use special gaming libraries to design game graphics, instead 
+I used the matplotlib library to design and draw the game board, which is a quarter of the coordinate board.
+The use of two functions __InsertForYourself and __InsertForNeighbor is to specify which square or squares this line belongs to when a line is selected and inserted.
 
+**Validation1:** In the game board, the squares that are on the edge of the board do not have neighbors on one or both sides, and
+this means that when the lines belonging to those parts are inserted, only the square itself should be inserted and
+it is not necessary to go to the __InsertForNeighbor(insert for neighboring squares) function.
+
+**Validation2:** This function tells us whether the line we selected is already selected or not.
+
+#### Tree class:
 
 
 
