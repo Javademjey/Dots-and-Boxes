@@ -11,12 +11,12 @@ select a number from 1 to 4 and this indicates the line number that you insert i
 This process continues until all the squares are occupied, and when all the squares are occupied, the game ends and the one who occupies the most squares wins the game.
 
 ### Code description:
-DeterminationOfPoints: 
+**DeterminationOfPoints:** 
 The input of this function is the number of points (if we enter the number 4 in the input, it means
 we have a game board with 16 points and 9 squares) and the output of this function gives us two lists, the first of which is
 the coordinates of all x's and the second of the coordinates of all y.
 
-UserSeparating_X_and_Y and SysSeparating_X_and_Y:
+**UserSeparating_X_and_Y and SysSeparating_X_and_Y:**
 When the user or the system finishes his movement by inserting a line, it will be directed to one of these two functions
 according to who the movement belongs to. These two functions organize the inputs and prepare them for display on the game screen.
 
@@ -25,30 +25,30 @@ I used tree structure and linked list to write this program.
 Linked list to navigate between nodes and tree to predict next states.
 My node class is box, which has the properties of nodes, but due to a bug encountered by the program, I had to create another node class called TempBox.
 #### Box class:
-Index: box/square number (each node has a specific number)
+**Index:** box/square number (each node has a specific number)
 
-Number: line number (top=1, right=2, bottom=3, left=4)
+**Number:** line number (top=1, right=2, bottom=3, left=4)
 
-Next: The next node
+**Next:** The next node
 
-prev: previous node
+**prev:** previous node
 
-Scoring: Each node is given a unique score based on the number of four lines inserted (25 points per line).
+**Scoring:** Each node is given a unique score based on the number of four lines inserted (25 points per line).
 If any line is inserted, the position of that line changes from False to True.
 
-list_of_branches: Before the system moves, it creates a tree and continues it to several levels and chooses the best mode.
+**list_of_branches:** Before the system moves, it creates a tree and continues it to several levels and chooses the best mode.
 The root of the tree is a node (square) that is evaluated and selected
 from among the existing nodes. Each node contains a list of all the nodes of the next level. In the next level,
 a node is again evaluated and selected among the nodes, and inside the selected 
 node there is a list of nodes of the next level, and if needed, we go to the next level and this process continues.
 The name of this list is list_of_branches.
 #### BigSquare class:
-CoordinateConfiguration: Configuration of coordinates: In this function, we calculate the coordinates of both points of a line
+**CoordinateConfiguration:** Configuration of coordinates: In this function, we calculate the coordinates of both points of a line
 from the four lines forming a square and append each one to own list. For example, the line in the top position is append to the __Lines_in_location_up list.
 
-InsertMovesInBord: It points to a line entered by the user or the system and refers to another function.
+**InsertMovesInBord:** It points to a line entered by the user or the system and refers to another function.
 
-CountingPoints: If the user or the system gets a square score, this function records that score.
+**CountingPoints:** If the user or the system gets a square score, this function records that score.
 
 
 
