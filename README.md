@@ -73,9 +73,11 @@ In this class, we predict and evaluate the next few moves by creating a decision
 
 **CreateListOfRoots:** All the squares are connected according to the number they have in the form of a linked list structure and are append in a list named root.
 
-****
+**StatePrediction:** This function is for best case evaluation. Its function is that it looks for a square with a
+score of 25 or 75 and when it finds the desired square, it sees the score of its neighbors, whichever one has a lower score, it chooses the line next to it.
 
-
+**SmartChoiceForLines:** When the desired square is selected, then the system evaluates which line is better 
+to insert, and for this reason, it evaluates its neighboring squares, each one with a lower score is selected.
 
 
 
