@@ -373,16 +373,19 @@ class Tree(BigSquare):
         self.root = selfBS.CreateListOfBoxes(0)
         
     def CreateBranchesOfEachRoot(self ,selfBS):   # predecting moves 
-
+        
+        #first state
         boxes_list1 = self.root
         ret_list1 = self.StatePrediction(selfBS ,boxes_list1 ,Box_or_TempBox=1) #  predict a guss for sys -> level 1  , Box_or_TempBox -> Box = 0 , TempBox = 1
         self.root[ret_list1[1]].list_of_branches = ret_list1[0]  # ret_list[0] = boxes_list , ret_list[1] = boxindex  
         boxes_list2 = self.root[ret_list1[1]].list_of_branches   
 
+        #second state
         ret_list2 = self.StatePrediction(selfBS ,boxes_list2 ,Box_or_TempBox=1) # predict a guss for user -> level 2
         boxes_list2[ret_list2[1]].list_of_branches = ret_list2[0]  
         boxes_list3 = boxes_list2[ret_list2[1]].list_of_branches
          
+        #third state
         ret_list3 = self.StatePrediction(selfBS ,boxes_list3 ,Box_or_TempBox=1) # predict a guss for sys -> level 3
         boxes_list3[ret_list3[1]].list_of_branches = ret_list3[0]  
         
