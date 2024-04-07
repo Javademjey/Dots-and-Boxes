@@ -67,11 +67,13 @@ it is not necessary to go to the __InsertForNeighbor(insert for neighboring squa
 **Validation2:** This function tells us whether the line we selected is already selected or not.
 
 #### Tree class:
+In this class, we predict and evaluate the next few moves by creating a decision tree for system move. 
 
+**original_root , root:**  These two lists are for nodes. We predict the states in the _root_ list and when we find the best state, we apply the desired movement in the original_root list.
 
+**CreateListOfRoots:** All the squares are connected according to the number they have in the form of a linked list structure and are append in a list named root.
 
-
-
+****
 
 
 
