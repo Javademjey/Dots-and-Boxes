@@ -1,5 +1,6 @@
 # Dots-and-Boxes
-This is a Dot and Box game.
+This is a Dot and Box game.                                                                                                                                                                                                                  
+This game is the project of my undergraduate Data Structure course.
 
 ### Game description:
 The goal in this game is to occupy a square, and this happens if four lines are placed in a square, and someone gets the points of the square that has inserted the last line.
